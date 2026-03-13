@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 10% 3%; /* Dark background */
+    --foreground: 210 40% 98%; /* Light text */
+
+    --card: 220 10% 8%; /* Slightly lighter dark for cards */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 10% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 260 80% 60%; /* Vibrant purple */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 220 10% 15%; /* Muted dark for secondary elements */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 10% 20%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 260 80% 60%; /* Same as primary for accent */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 10% 25%;
+    --input: 220 10% 25%;
+    --ring: 260 80% 60%;
+
+    --radius: 0.5rem;
+
+    --font-display: 'Clash Display', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Custom gradients */
+    --gradient-hero: linear-gradient(to right, hsl(260 80% 60%), hsl(280 90% 70%));
+    --gradient-text: linear-gradient(to right, hsl(260 80% 60%), hsl(280 90% 70%));
+
+    /* Additional custom colors for portfolio */
+    --color-heading: 210 40% 98%;
+    --color-subheading: 215 20.2% 65.1%;
+    --color-text-light: 210 40% 98%;
+    --color-text-dark: 220 10% 3%;
+    --color-bg-dark: 220 10% 3%;
+    --color-bg-light: 210 40% 98%;
+    --color-accent-light: 260 80% 70%;
+    --color-accent-dark: 260 80% 50%;
+  }
+
+  .light { /* Light mode variables, though dark mode is primary */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 260 80% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 260 80% 60%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --font-display: 'Clash Display', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --gradient-hero: linear-gradient(to right, hsl(260 80% 60%), hsl(280 90% 70%));
+    --gradient-text: linear-gradient(to right, hsl(260 80% 60%), hsl(280 90% 70%));
+
+    /* Additional custom colors for portfolio */
+    --color-heading: 222.2 84% 4.9%;
+    --color-subheading: 215.4 16.3% 46.9%;
+    --color-text-light: 210 40% 98%;
+    --color-text-dark: 220 10% 3%;
+    --color-bg-dark: 220 10% 3%;
+    --color-bg-light: 210 40% 98%;
+    --color-accent-light: 260 80% 70%;
+    --color-accent-dark: 260 80% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+
+  }
+
+  /* Custom selection style */
+  ::selection {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+}
